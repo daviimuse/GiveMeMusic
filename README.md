@@ -7,9 +7,11 @@ BackEnd
         - autenticazione (JWT --> OAuth0-2 - Access token - Refresh token)
         - di gestione dati (DB mariaDB sul proprio argomento)
                 API REST -> CRUD su DB
+                Scelta: php + mariaDB;
 FrontEnd
         - HTML/JS
         - Linguaggio a scelta (AndroidStudio,PY,C#,Angular,Electron,...)
+                Scelta: HTML + Js;
 
 .GIT
 Pubblicazione;
