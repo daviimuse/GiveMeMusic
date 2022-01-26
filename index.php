@@ -17,7 +17,7 @@
               </div>
               <div class="col-md-7 form-part">
                 <div class="row">
-                   <p class="signinlink">I already have an account <a href="/frontEnd/login.html">Sign In</a></p>
+                   <p class="signinlink">I already have an account <a href="/frontEnd/login.php">Sign In</a></p>
                   <form method="POST" action="../backEnd/login_register.php">           
                        <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingInput" name="mail">
