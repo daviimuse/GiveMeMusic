@@ -3,8 +3,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["Rpassword"])){//Registr
     $name = $_POST["name"];
     $mail = $_POST["mail"];
     $psw = $_POST["Rpassword"];
-    //Controllare che utente non esista già
-    $car = "/gestioneDB/accounts/" .hash(md5, $mail)  . "/";
+    $car = "/gestioneDB/accounts/" .hash(md5, $mail)  . "/";//Controllo utente
     chmod("/gestioneDB/accounts/", 0755);
     if(!file_exists($car)){
         mkdir($car);
@@ -24,8 +23,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["Rpassword"])){//Registr
         $hashpsw=fread($file,filesize($car . "psw.txt"));
         fclose($file);
         if(hash(md5, $psw) == $hashpsw){
-            // echo "Password corretta";
-            // echo "Login effettuato";
             upload();
         }else{
             echo "Password sbagliata";
