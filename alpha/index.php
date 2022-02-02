@@ -1,5 +1,5 @@
 <?php
-  echo $_SERVER["ADDR"];
+  echo $_SERVER["SERVER_ADDR"];
 ?>
 <!doctype html>
   <html lang="en">
