@@ -3,7 +3,7 @@ services:
   beta:
     container_name: beta
     build:
-      context: ./alpha
+      context: ./beta
       dockerfile: Dockerfile
     ports:
       - "5001:80"
