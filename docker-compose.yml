@@ -1,14 +1,14 @@
 version: '3'
 services:
-  beta:
-    container_name: beta
-    build:
-      context: ./beta
-      dockerfile: Dockerfile
-    ports:
-      - "5001:80"
-    volumes:
-      - ./alpha:/var/www/html/
+  # beta:
+  #   container_name: beta
+  #   build:
+  #     context: ./beta
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "5001:80"
+  #   volumes:
+  #     - ./alpha:/var/www/html/
   alpha:
     container_name: alpha
     build:
@@ -22,7 +22,7 @@ services:
       container_name: nginx
       build: ./nginx
       depends_on:
-      - beta
+      # - beta
       - alpha
       ports:
         - "8080:80"
