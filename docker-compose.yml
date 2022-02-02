@@ -1,0 +1,28 @@
+version: '3'
+services:
+  beta:
+    container_name: beta
+    build:
+      context: ./alpha
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    volumes:
+      - ./alpha:/var/www/html/
+  alpha:
+    container_name: alpha
+    build:
+      context: ./alpha
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80"
+    volumes:
+      - ./alpha:/var/www/html/
+  nginx:
+      container_name: nginx
+      build: ./nginx
+      depends_on:
+      - beta
+      - alpha
+      ports:
+        - "8080:80"

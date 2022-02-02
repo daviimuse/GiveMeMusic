@@ -2,4 +2,7 @@ tasks:
   - init: |
       echo 'TODO: build project'
     command: |
-      echo 'TODO: start app'
+      docker-compose up
+ports:
+  - port: 8080
+    onOpen: open-browser
