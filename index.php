@@ -28,8 +28,13 @@
                         <label for="floatingPassword">Password</label>
                       </div>
                       <div class="form-floating">
-                       <button type="submit" class="btn btn-primary">Create Account</button>
+                       <button type="submit" class="btn btn-primary" onclick="appLoad()" >Create Account</button>
                       </div>
+                      <script>
+                      function appLoad(){
+                            window.location.href="./backEnd/app/app.php";
+                        }
+                    </script>
                   </div>
                 </form>
                 </div>
