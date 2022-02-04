@@ -18,7 +18,7 @@
               <div class="col-md-7 form-part">
                 <div class="row">
                    <p class="signinlink">Don't have an account <a href="index.php">Sign Up</a></p>
-                   <form method="POST" action="../backEnd/login_register.php">    
+                   <form method="POST" action="backEnd/login_register.php">    
                   <div class="col-lg-8 col-md-11 login formcol mx-auto">
                        <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingInput" name="mail">
