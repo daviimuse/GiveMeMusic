@@ -1,6 +1,5 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST["Rpassword"])){//Registrazione
-    $name = $_POST["name"];
     $mail = $_POST["mail"];
     $psw = $_POST["Rpassword"];
     $car = "/gestioneDB/accounts/" .hash(md5, $mail)  . "/";//Controllo utente
