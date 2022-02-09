@@ -18,10 +18,10 @@
 				<!-- <label for="chk" aria-hidden="true">Welcome to GiveMeMusic!</label>	 -->
 					<input type="checkbox" id="chk" aria-hidden="true">
 						<div class="signup">
-							<form method="POST" action="./backEnd/gestioneDB/config.php">
+							<form method="POST" action="./backEnd/OAuth2/index.php">
 								<label for="chk" aria-hidden="true">Sign up</label>
-								<input type="email" name="mail" placeholder="Email" required="">
-								<input type="password" name="Rpassword" placeholder="Password" required="">
+								<input type="email" name="mail" placeholder="Email">
+								<input type="password" name="Rpassword" placeholder="Password">
 								<button method="POST" name="sButton">Sign up</button>
 								<button method="POST" name="gB">Login with Google</button>
 							</form>
@@ -40,16 +40,12 @@
 	</body>
 </html>
 <?php
-	include("./backEnd/gestioneDB/config.php");
-	include("./backEnd/OAuth2/gLogin.php");
+	//include("./backEnd/gestioneDB/config.php");
+	include("./backEnd/OAuth2/index.php");
 	
-	if(array_key_exists('sButton', $_POST)){
-		writeDataDB();
-	}
-
-	if(array_key_exists('gB', $_POST)){
-		gLog();
-	}
+	// if(array_key_exists('sButton', $_POST)){
+	// 	writeDataDB();
+	// }
 ?>
 
 
