@@ -34,16 +34,9 @@
                       function appLoad(){
                             window.location.href="./backEnd/app/app.php";
                         }
-                        function dbTrial(){
-                            window.location.href="./backEnd/gestioneDB/dbG.php";
-                        }
                     </script>
                   </div>
                 </form>
-                            <form action="backEnd/gestioneDB/dbG.php" method="post"></form>
-                                <div>
-                                    <button type="submit" onclick="dbTrial()">send</button>
-                                </div>
                 </div>
               </div>
           </div>

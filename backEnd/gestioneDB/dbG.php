@@ -1,15 +1,26 @@
 <?php
-$servername = "ec2-52-208-221-89.eu-west-1.compute.amazonaws.com";
-$username = "colbpsouojhqbl";
-$password = "0246d8a225c675bd471cdde69e9f28f4992a190626d58dbcaa549a30e09197aa";
+include('config.php');
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if(checktbl($conn)){
+        echo "La tabella esiste o é stata creata";
+    }
 
-$conn = new mysqli($servername,
-			$username, $password);
-
-if ($conn->connect_error) {
-	die("Connection failure: "
-		. $conn->connect_error);
+    function checktbl($conn){
+        $query = "CREATE TABLE IF NOT EXISTS users (
+            id int not null auto_increment,
+            email text not null,
+            psw text not null,
+            primary key (id)
+        );";
+        if($conn->query($query)){
+            return true;   
+        }else{
+            echo "Error";
+            return false;
+        }
+        //var_dump($result);
+    }
 }
-
-$conn->close();
 ?>
+
+
