@@ -23,7 +23,6 @@
 								<input type="email" name="mail" placeholder="Email">
 								<input type="password" name="Rpassword" placeholder="Password">
 								<button method="POST" name="sButton">Sign up</button>
-								<button method="POST" name="gB">Login with Google</button>
 							</form>
 						</div>
 						<div class="login">
@@ -32,6 +31,7 @@
 								<input type="email" name="mail" placeholder="Email" required="">
 								<input type="password" name="password" placeholder="Password" required="">
 								<button>Login</button>
+								<button method="POST" name="gB">Login with Google</button>
 							</form>
 						</div>
 				</div>
