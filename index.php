@@ -23,15 +23,9 @@
 								<input type="email" name="mail" placeholder="Email" required="">
 								<input type="password" name="Rpassword" placeholder="Password" required="">
 								<button method="POST" name="sButton">Sign up</button>
+								<button method="POST" name="gB">Login with Google</button>
 							</form>
 						</div>
-						<?php
-		include("./backEnd/gestioneDB/config.php");
-
-			if(array_key_exists('sButton', $_POST)){
-				writeDataDB();
-			}
-	?>
 						<div class="login">
 							<form method="POST" action="./backEnd/login_register.php">
 								<label for="chk" aria-hidden="true">Login</label>
@@ -45,6 +39,18 @@
 		</html>
 	</body>
 </html>
+<?php
+	include("./backEnd/gestioneDB/config.php");
+	include("./backEnd/OAuth2/gLogin.php");
+	
+	if(array_key_exists('sButton', $_POST)){
+		writeDataDB();
+	}
+
+	if(array_key_exists('gB', $_POST)){
+		gLog();
+	}
+?>
 
 
 
