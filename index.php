@@ -1,53 +1,50 @@
-<!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
-    <div class="container-fluid form-container">
-      <div class="container login-container">
-          <div class="row">
-              <div class="col-md-5 content-part">
-                  <h2>Sing up!</h2>
-              </div>
-              <div class="col-md-7 form-part">
-                <div class="row">
-                   <p class="signinlink">I already have an account <a href="login.php">Sign In</a></p>
-                  <form method="POST" action="backEnd/login_register.php">           
-                       <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" name="mail">
-                        <label for="floatingInput">Email</label>
-                      </div>
-                      <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" name="Rpassword">
-                        <label for="floatingPassword">Password</label>
-                      </div>
-                      <div class="form-floating">
-                       <button type="submit" class="btn btn-primary" onclick="appLoad()" >Create Account</button>
-                      </div>
-                      <script>
-                      function appLoad(){
-                            window.location.href="./backEnd/app/app.php";
-                        }
-                        function dbTrial(){
-                            window.location.href="./backEnd/gestioneDB/dbG.php";
-                        }
-                    </script>
-                  </div>
-                </form>
-                            <form action="backEnd/gestioneDB/dbG.php" method="post"></form>
-                                <div>
-                                    <button type="submit" onclick="dbTrial()">send</button>
-                                </div>
-                </div>
-              </div>
-          </div>
-      </div>
-    </div> 
-  </body>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to GiveMeMusic!</title>
+  <link rel="stylesheet" href="./frontEnd/assets/cssFolder/style.css">
+</head>
+	<body>
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title>GiveMeMusic!</title>
+			<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+		</head>
+			<body>
+				<div class="main">  
+				<!-- <label for="chk" aria-hidden="true">Welcome to GiveMeMusic!</label>	 -->
+					<input type="checkbox" id="chk" aria-hidden="true">
+						<div class="signup">
+							<form method="POST" action="./backEnd/gestioneDB/config.php">
+								<label for="chk" aria-hidden="true">Sign up</label>
+								<input type="email" name="mail" placeholder="Email" required="">
+								<input type="password" name="Rpassword" placeholder="Password" required="">
+								<button method="POST" name="sButton">Sign up</button>
+							</form>
+						</div>
+						<?php
+		include("./backEnd/gestioneDB/config.php");
+
+			if(array_key_exists('sButton', $_POST)){
+				writeDataDB();
+			}
+	?>
+						<div class="login">
+							<form method="POST" action="./backEnd/login_register.php">
+								<label for="chk" aria-hidden="true">Login</label>
+								<input type="email" name="mail" placeholder="Email" required="">
+								<input type="password" name="password" placeholder="Password" required="">
+								<button>Login</button>
+							</form>
+						</div>
+				</div>
+			</body>
+		</html>
+	</body>
 </html>
+
+
+
