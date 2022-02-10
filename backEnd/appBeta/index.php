@@ -12,7 +12,6 @@
     <title>GiveMeMusic Alpha</title>
 </head>
 <body>
-    
     <div class="container">        
         <form action="">
             <input type="hidden" id='hidden_token'>
