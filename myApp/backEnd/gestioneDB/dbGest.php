@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('dbConfig.php');
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(checktbl($conn)){
         echo "La tabella esiste o é stata creata";
