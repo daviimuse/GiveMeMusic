@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome to GiveMeMusic!</title>
-  <link rel="stylesheet" href="./frontEnd/assets/cssFolder/style.css">
+  <link rel="stylesheet" href="./frontEnd/assets/style.css">
 </head>
 	<body>
 		<!DOCTYPE html>
