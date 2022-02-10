@@ -1,7 +1,7 @@
 <?php
 
 //start session on web page
-session_start();
+//session_start();
 
 //config.php
 
@@ -25,4 +25,4 @@ $google_client->addScope('email');
 
 $google_client->addScope('profile');
 
-?> Close your php here  
+?>
