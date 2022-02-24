@@ -22,7 +22,7 @@
       </li>
 
      <li>
-       <a href="#">
+       <a href="fsongs.php">
          <i class='bx bx-heart' ></i>
          <span class="links_name">Favorite songs</span>
        </a>
