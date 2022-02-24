@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome to GiveMeMusic!</title>
-  <link rel="stylesheet" href="./frontEnd/assets/style.css">
+  <link rel="stylesheet" href="./frontEnd/assets/cssFolder/index.css">
 </head>
 	<body>
 		<!DOCTYPE html>
@@ -31,11 +31,11 @@
 								<input type="password" name="password" placeholder="Password">
 								<button>Login</button>
 						</form>	
-									<form name="logG"method="POST" action="./backEnd/OAuth2/index.php">
+									<form name="logG"method="POST" action="./main/main.php">
 									<div>
 										<button method="POST" name="gB"><?php 
 										include('./backEnd/OAuth2/config.php');
-
+										
 										$login_button = '';
 
 										if(isset($_POST['gB'])){
@@ -65,7 +65,7 @@
 										}
 
 										if(!isset($_SESSION['access_token'])){
-											$login_button = '<a href="'.$google_client->createAuthUrl().'" style="color:white;">Login With Google</a>';
+											$login_button = '<a href="'.$google_client->createAuthUrl().'" style="color:white;">Login with Google</a>';
 										}
 
 										if($login_button == '')

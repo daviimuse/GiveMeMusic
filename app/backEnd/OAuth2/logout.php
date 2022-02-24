@@ -1,16 +1,16 @@
 <?php
 
-    //logout.php
+//logout.php
 
-    include('config.php');
+include('config.php');
 
-    //Reset OAuth access token
-    $google_client->revokeToken();
+//Reset OAuth access token
+$google_client->revokeToken();
 
-    //Destroy entire session data.
-    session_destroy();
+//Destroy entire session data.
+session_destroy();
 
-    //redirect page to index.php
-    header('location:../appBeta/index.php');
+//redirect page to index.php
+header('location:../../index.php');
 
 ?>

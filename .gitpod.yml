@@ -1,8 +1,6 @@
-# Commands to start on workspace startup
-tasks:
-  - init: yarn install
-    command: yarn build
-# Ports to expose on workspace startup
 ports:
-  - port: 8000
+  - port: 8000:80
     onOpen: open-browser
+
+tasks:
+  - command: sudo docker-compose up -d
