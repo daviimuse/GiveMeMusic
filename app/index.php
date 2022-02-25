@@ -20,8 +20,8 @@
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-37">Sign into <br>Give Me Music!</span>
 
-					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
-						<input class="input100" type="text" name="lMail" placeholder="Username or email">
+					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your email">
+						<input class="input100" type="text" name="lMail" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
 
