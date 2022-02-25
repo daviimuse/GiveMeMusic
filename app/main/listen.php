@@ -28,13 +28,13 @@
        </a>
        <span class="tooltip">Favorite songs</span>
      </li>
-     <li>
+     <!-- <li>
        <a href="#">
          <i class='bx bx-user' ></i>
          <span class="links_name">User</span>
        </a>
        <span class="tooltip">User</span>
-     </li>
+     </li> -->
      <li>
        <a href="#">
          <i class='bx bx-cog' ></i>

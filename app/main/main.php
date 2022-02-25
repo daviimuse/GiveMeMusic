@@ -34,13 +34,13 @@
        </a>
        <span class="tooltip">Favorite songs</span>
      </li>
-     <li>
+     <!-- <li>
        <a href="#">
          <i class='bx bx-user' ></i>
          <span class="links_name">User</span>
        </a>
        <span class="tooltip">User</span>
-     </li>
+     </li> -->
      <li>
        <a href="#">
          <i class='bx bx-cog' ></i>
@@ -61,7 +61,6 @@
     </ul>
   </div>
   <section class="home-section">
-      <div class="text">Welcome<br>
       <div class="text">Welcome to Give Me Music!<br>
     <div class="text">Press the first button on the sidebar to access our services!</div><br>
 </section>

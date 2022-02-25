@@ -27,20 +27,13 @@
         </a>
          <span class="tooltip">Choose your music</span>
       </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-heart' ></i>
-         <span class="links_name">Favorite songs</span>
-       </a>
-       <span class="tooltip">Favorite songs</span>
-     </li>
-     <li>
+     <!-- <li>
        <a href="#">
          <i class='bx bx-user' ></i>
          <span class="links_name">User</span>
        </a>
        <span class="tooltip">User</span>
-     </li>
+     </li> -->
      <li>
        <a href="#">
          <i class='bx bx-cog' ></i>
@@ -68,7 +61,7 @@
     </ul>
   </div>
   <section class="home-section">
-      <div class="text">Here you can find yout favorite songs!<br>
+      <div class="text">Here you can find your favorite songs!<br>
     <div class="text">!Work In Progress!</div><br>
 </section>
   <script src="../frontEnd/assets/jsFolder/script.js"></script>
