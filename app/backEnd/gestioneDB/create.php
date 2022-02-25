@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     function checktbl($conn){
         $query = "CREATE TABLE IF NOT EXISTS users (
             id int not null auto_increment,
-            email text not null,
+            mail text not null,
             psw text not null,
             primary key (id)
         );";
@@ -18,7 +18,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             echo "Error";
             return false;
         }
-        //var_dump($result);
     }
 }
 ?>
