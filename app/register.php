@@ -42,7 +42,7 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-						<a href="./main/main.php">Sign Up</a>
+						<a href="./webApp/main.php">Sign Up</a>
 						</button>
 					</div>
 					<div class="text-center">
