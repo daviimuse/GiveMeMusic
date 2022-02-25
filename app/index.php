@@ -1,89 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome to GiveMeMusic!</title>
-  <link rel="stylesheet" href="./frontEnd/assets/cssFolder/index.css">
+	<title>Give Me Music!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/css/util.css">
+	<link rel="stylesheet" type="text/css" href="./frontEnd/loginFolders/css/main.css">
 </head>
-	<body>
-		<!DOCTYPE html>
-		<html>
-		<head>
-			<title>GiveMeMusic!</title>
-			<link rel="stylesheet" type="text/css" href="slide navbar style.css">
-		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-		</head>
-			<body>
-				<div class="main">  
-					<input type="checkbox" id="chk" aria-hidden="true">
-						<div class="signup">
-							<form name="reg" method="POST" action="./backEnd/login_register.php">
-								<label for="chk" aria-hidden="true">Sign up</label>
-								<input type="email" name="mail" placeholder="Email">
-								<input type="password" name="Rpassword" placeholder="Password">
-								<button method="POST" name="sButton">Sign up</button>
-							</form>
-						</div>
-						<div class="login">
-						<form name="log" method="POST" action="./backEnd/login_register.php">
-								<label for="chk" aria-hidden="true">Login</label>
-								<input type="email" name="mail" placeholder="Email">
-								<input type="password" name="password" placeholder="Password">
-								<button>Login</button>
-						</form>	
-									<form name="logG"method="POST" action="./main/main.php">
-									<div>
-										<button method="POST" name="gB"><?php 
-										include('./backEnd/OAuth2/config.php');
-										
-										$login_button = '';
+<body>
+	
+	
+	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-37">
+					Sign In
+				</span>
 
-										if(isset($_POST['gB'])){
-											$login_button = $_POST["gB"];
-										}
-
-										if(isset($_GET["code"]))
-										{
-											$token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
-											if(!isset($token['error']))
-											{
-												$google_client->setAccessToken($token['access_token']); 
-												$_SESSION['access_token'] = $token['access_token'];
-												$google_service = new Google_Service_Oauth2($google_client); 
-												$data = $google_service->userinfo->get(); 
-										
-											if(!empty($data['given_name'])){$_SESSION['user_first_name'] = $data['given_name'];}
-										
-											if(!empty($data['family_name'])){$_SESSION['user_last_name'] = $data['family_name'];}
-										
-											if(!empty($data['email'])){$_SESSION['user_email_address'] = $data['email'];}
-										
-											if(!empty($data['gender'])){$_SESSION['user_gender'] = $data['gender'];}
-										
-											if(!empty($data['picture'])){$_SESSION['user_image'] = $data['picture'];}
-											}
-										}
-
-										if(!isset($_SESSION['access_token'])){
-											$login_button = '<a href="'.$google_client->createAuthUrl().'" style="color:white;">Login with Google</a>';
-										}
-
-										if($login_button == '')
-										{
-											echo '<div class="panel-heading">Welcome User</div><div class="panel-body">';
-											echo '<img src="'.$_SESSION["user_image"].'" class="img-responsive img-circle img-thumbnail" />';
-											echo '<h3><b>Name :</b> '.$_SESSION['user_first_name'].' '.$_SESSION['user_last_name'].'</h3>';
-											echo '<h3><b>Email :</b> '.$_SESSION['user_email_address'].'</h3>';
-											echo '<h3><a href="logout.php">Logout</h3></div>';
-										}else{
-											echo '<div>'.$login_button . '</div>';
-										}
-										?></button>
-									</div>
-								</form>
-						</div>
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+					<input class="input100" type="text" name="username" placeholder="username or email">
+					<span class="focus-input100"></span>
 				</div>
-			</body>
-		</html>
-	</body>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+					<input class="input100" type="password" name="pass" placeholder="password">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						Sign In
+					</button>
+				</div>
+
+				<div class="text-center p-t-57 p-b-20">
+					<span class="txt1">
+						Or login with
+					</span>
+				</div>
+
+				<div class="flex-c p-b-112">
+					<a href="#" class="login100-social-item">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+
+					<a href="#" class="login100-social-item">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
+					</a>
+				</div>
+
+				<div class="text-center">
+					<a href="#" class="txt2 hov1">
+						Sign Up
+					</a>
+				</div>
+			</form>
+
+			
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
 </html>
