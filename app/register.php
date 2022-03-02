@@ -41,7 +41,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button id="reg" class="login100-form-btn">
 						<a href="./webApp/main.php">Sign Up</a>
 						</button>
 					</div>
@@ -56,6 +56,7 @@
 			</div>
 		</div>
 		<div id="dropDownSelect1"></div>
+		<script src="./backEnd/gestioneDB/request.js"></script>
 		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 		<script src="vendor/animsition/js/animsition.min.js"></script>
 		<script src="vendor/bootstrap/js/popper.js"></script>

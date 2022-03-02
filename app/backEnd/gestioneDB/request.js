@@ -1,16 +1,26 @@
-async function connect(url = 'http://papopep.altervista.org/GiveMeMusic/API/user.php', data = {}) {
-    const response = await fetch(url, {
+var but = document.getElementById('reg');
+
+but.onclick = function connect() {
+  var mail = document.getElementsByName("rMail");
+  var psw = document.getElementsByName("rPsw");
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  
+  var raw = JSON.stringify({
+    "mail": mail,
+    "psw": psw
+  });
+  
+  var requestOptions = {
     method: 'PUT',
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-        'Content-Type': 'application/json'
-    },
-      redirect: 'follow', // manual, *follow, error
-      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
-    });
-    return response.json(); // parses JSON response into native JavaScript objects
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+  
+  fetch("http://papopep.altervista.org/GiveMeMusic/API/user.php", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 }
   
