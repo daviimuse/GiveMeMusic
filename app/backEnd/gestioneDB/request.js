@@ -1,6 +1,4 @@
-var but = document.getElementById('reg');
-
-but.onclick = function connect() {
+function connect(){
   console.log("dentro la funzione");
   var mail = document.getElementsByName("rMail");
   var psw = document.getElementsByName("rPsw");

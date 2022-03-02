@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="./frontEnd/assets/loginFolders/vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="./frontEnd/assets/loginFolders/css/util.css">
 	<link rel="stylesheet" type="text/css" href="./frontEnd/assets/loginFolders/css/main.css">
+	<script src="./backEnd/gestioneDB/request.js"></script>
 </head>
 	<body>
 		<div class="container-login100">
@@ -41,7 +42,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button id="reg" class="login100-form-btn">
+						<button id="reg" class="login100-form-btn" onclick="connect()">
 						<a>Sign Up</a>
 						</button>
 					</div>
@@ -56,7 +57,6 @@
 			</div>
 		</div>
 		<div id="dropDownSelect1"></div>
-		<script src="./backEnd/gestioneDB/request.js"></script>
 		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 		<script src="vendor/animsition/js/animsition.min.js"></script>
 		<script src="vendor/bootstrap/js/popper.js"></script>
