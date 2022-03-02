@@ -17,7 +17,7 @@
 	<body>
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="PUT">
 					<span class="login100-form-title p-b-37">Sign up to <br>Give Me Music!</span>
 
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your name">
