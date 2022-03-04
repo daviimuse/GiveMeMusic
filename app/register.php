@@ -18,7 +18,7 @@
 	<body>
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="PUT"> <!-- Form registrazione -->
 					<span class="login100-form-title p-b-37">Sign up to <br>Give Me Music!</span>
 
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your name">
@@ -32,25 +32,24 @@
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your email">
-						<input class="input100" type="text" name="rMail" placeholder="Email">
+						<input class="input100" type="text" id="rMail" name="rMail" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-						<input class="input100" type="password" name="rPsw" placeholder="Password">
+						<input class="input100" type="password" id="rPsw" name="rPsw" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
-					
-					<form method="PUT">
+
 					<div class="container-login100-form-btn">
-						<button id="reg" class="login100-form-btn" onclick="connect()"><a>Sign Up</a></button>
+						<button id="reg" class="login100-form-btn" onclick="connect()">
+                            <a>Sign Up</a>
+                        </button>
 					</div>
-					</form>
+
 					<div class="text-center">
 						<a href="index.php" class="txt2 hov1">
-							<br>
-							Already have an account? Sign In!
-							<br>
+							<br>Already have an account? Sign In!<br>
 						</a>
 					</div>
 				</form>
