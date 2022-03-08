@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Favorite songs!</title>

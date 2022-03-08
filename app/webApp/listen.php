@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Listen to music!</title>
@@ -49,15 +48,13 @@
         </a>
          <span class="tooltip">Home Page</span>
       </li>
-     <li class="profile">
+      <li class="profile">
          <div class="profile-details">
-           <!-- <img src="profile.jpg" alt="profileImg">
-           <div class="name_job">
-             <div class="name">Prem Shahi</div>
-             <div class="job">Web designer</div>
-           </div> -->
+            <div class="name_job">
+                <div class="name">Piero Angela</div>
+            </div>
          </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
+        <i class='bx bx-log-out' id="log_out"></i>
      </li>
     </ul>
   </div>
