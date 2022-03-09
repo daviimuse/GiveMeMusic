@@ -37,7 +37,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button id="reg" class="login100-form-btn" onclick="resetPsw()"> <!-- ;return false -->
+						<button id="reg" class="login100-form-btn" onclick="resetPsw();return false">
                             <a>Reset</a>
                         </button>
 					</div>

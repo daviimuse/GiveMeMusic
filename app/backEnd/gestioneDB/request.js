@@ -49,15 +49,13 @@ function userLogin()
         .then(response => response.text())
         .then(result => 
             {
-                if(result != ""){
-                    console.log(result);
-                    arr = JSON.parse(result);
-                    if (arr.response = "ok") {
-                        console.log(arr.response);
-                        window.location.replace("webApp/main.php");
-                    }
+                console.log(result);
+                arr = JSON.parse(result);
+                if (arr.response == "ok") {
+                    console.log(arr.response);
+                    window.location.replace("webApp/main.php");
                 }else{
-                    alert("User not registered!");
+                    alert("Credenziali errate!");
                     document.getElementById('lMail').value = '';
                     document.getElementById('lPsw').value = '';
                 }
@@ -78,24 +76,30 @@ function resetPsw(){
       "newpsw": newpsw
     });
     
-    var requestOptions = {
-      method: 'PATCH',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
-    
-    fetch("http://papopep.altervista.org/GiveMeMusic/API/user.php", requestOptions)
-      .then(response => response.text())
-      .then(result => 
-        {
-                console.log(result);
-                arr = JSON.parse(result);
-                if (arr.response = "ok") {
-                    console.log(arr.response);
-                    window.location.replace("index.php");
-                }
-        })
-      .catch(error => console.log('error', error));
+    if(newpsw == confnewpsw){
+        var requestOptions = {
+            method: 'PATCH',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+          };
+          
+          fetch("http://papopep.altervista.org/GiveMeMusic/API/user.php", requestOptions)
+            .then(response => response.text())
+            .then(result => 
+              {
+                      console.log(result);
+                      arr = JSON.parse(result);
+                      if (arr.response = "ok") {
+                          console.log(arr.response);
+                          window.location.replace("index.php");
+                      }
+              })
+            .catch(error => console.log('error', error));
+    }else{
+        alert("Le password sono diverse!");
+        document.getElementById("nPsw").value = '';
+        document.getElementById("cnPsw").value = '';
+    }
 }
 
