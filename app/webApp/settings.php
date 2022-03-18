@@ -26,25 +26,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Home Page</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="../frontEnd/assets/cssFolder/main.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="./requests/spotifyAPI.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-<body onload="getNewReleases()">
+<body>
   <div class="sidebar">
     <div class="logo-details">
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      
-      <li>
+
+    <li>
         <a href="explore.php">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Explore</span>
@@ -82,7 +76,6 @@
         <?php  
             if(isset($user)){
                 echo '<div class="name">'.$user.'</div>';
-                //echo '<div class="job">'.$mail.'</div>';
             }else{
                 echo '<div class="name">Piero Angela</div>';
             }
@@ -95,21 +88,9 @@
      </li>
     </ul>
   </div>
-  <div>
-    <section class="home-section" id="home-section">
-
-        <?php
-            if(isset($user)){
-            echo '<div class="text">Welcome '.$user.' to Give Me Music!<br>'; 
-            }else{
-            echo '<div class="text">Welcome user to Give Me Music!<br>';
-            }
-        ?>
-        <!-- <button onclick="getNewReleases()"> Get New Releases </button> -->
-        <div class="imgGallery" id="imgGallery">
-        </div>
-    </section>
-</div>
+  <section class="home-section">
+  <div class="text">Website settings<br>
+</section>
   <script src="../frontEnd/assets/jsFolder/script.js"></script>
 </body>
 </html>

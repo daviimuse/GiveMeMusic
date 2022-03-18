@@ -41,7 +41,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button id="reg" class="login100-form-btn" onclick="userRegister()">
+						<button type="button" id="reg" class="login100-form-btn" onclick="userRegister()">
                             <a>Sign Up</a>
                         </button>
 					</div>

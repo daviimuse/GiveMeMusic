@@ -21,13 +21,21 @@ function userRegister(){
   
     fetch("http://papopep.altervista.org/GiveMeMusic/API/user.php", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(result =>{
+            arr = JSON.parse(result);
+                if (arr.response == "ok") {
+                console.log(arr.response);
+                window.location.replace("index.php");
+            }else{
+                alert("Utente non registrato!");
+                document.getElementById('rMail').value = '';
+                document.getElementById('rPsw').value = '';
+            }
+        })  
         .catch(error => console.log('error', error));
-    console.log("User added to database");
 }
 
-function userLogin() 
-{
+function userLogin(){
     var mail = document.getElementById("lMail").value;
     var psw = document.getElementById("lPsw").value;
 
@@ -102,4 +110,3 @@ function resetPsw(){
         document.getElementById("cnPsw").value = '';
     }
 }
-
