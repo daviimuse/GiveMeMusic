@@ -16,9 +16,9 @@
 	<script src="./backEnd/gestioneDB/request.js"></script>
 </head>
 	<body>
-		<div class="container-login100">
+		<div class="container-login100"> <!-- Reset Password -->
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-				<form class="login100-form validate-form" method="PATCH"> <!-- Form registrazione -->
+				<form class="login100-form validate-form" method="PATCH">
 					<span class="login100-form-title p-b-37">Reset your password</span>
 
 					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your email">

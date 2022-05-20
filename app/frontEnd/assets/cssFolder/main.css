@@ -6,6 +6,13 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
 .sidebar{
   position: fixed;
   left: 0;
@@ -249,9 +256,9 @@
   }
 }
 .imgGallery {
-  --gap: 10px;
-  --num-cols: 5;
-  --row-height: 300px;
+  --gap: 35px;
+  --num-cols: 7;
+  --row-height: 375px;
 
   box-sizing: border-box;
   padding: var(--gap);

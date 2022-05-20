@@ -61,7 +61,7 @@ function userLogin(){
                 arr = JSON.parse(result);
                 if (arr.response == "ok") {
                     console.log(arr.response);
-                    window.location.replace("webApp/main.php");
+                    window.location.replace("user.php");
                 }else{
                     alert("Credenziali errate!");
                     document.getElementById('lMail').value = '';
@@ -69,6 +69,7 @@ function userLogin(){
                 }
             })
         .catch(error => console.log('error', error));
+        console.log(mail,psw);
 }
 
 function resetPsw(){
@@ -110,3 +111,53 @@ function resetPsw(){
         document.getElementById("cnPsw").value = '';
     }
 }
+
+function sendMail(){
+    var string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let OTP = '';
+      
+    var len = string.length;
+    for (let i = 0; i < 6; i++ ) {
+        OTP += string[Math.floor(Math.random() * len)];
+    }
+    console.log(OTP);
+
+    Email.send({
+    Host: "smtp.gmail.com",
+    Username: sender,
+    Password:password,
+    To: receiver,
+    From: sender,
+    Subject: "Check Email Sending",
+    Body: content,
+    }).then(function (message) {
+        alert("Email sent successfully")
+        });
+}
+
+function getGenresFromDB(){
+    var myHeaders = new Headers();
+    myHeaders.append("Cookie", "PHPSESSID=ef7a8ece01cd748d745abdaefc854ba8");
+    
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    
+    fetch("http://papopep.altervista.org/GiveMeMusic/API/music.php", requestOptions)
+      .then(response => response.text())
+      .then(result =>{
+        const j = JSON.parse(result)
+        for(var i = 0; i < j.length; i++){console.log(result)}
+    }).catch(error => console.log('error', error));
+}
+
+
+// const j = JSON.parse(result)
+//         for(var i = 0; i < j.albums.items.length; i++){
+//             var sImgLink = j.albums.items[i].images[1].url;
+//             var sId = j.albums.items[i].id;
+//             var sArtist = j.albums.items[i].artists[0].name;
+//             var sTitle = j.albums.items[i].name;
+//             var sReleaseDate = j.albums.items[i].release_date;
