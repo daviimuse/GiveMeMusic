@@ -1,6 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User infos</title>
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/css/util.css">
+    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/css/main.css">
+    <link rel="stylesheet" href="frontEnd/assets/cssFolder/user.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="backEnd/gestioneDB/request.js"></script>
+</head>
 <?php
-    require_once 'backEnd/OAuth2/google/vendor/autoload.php';
     session_start();
+    require_once 'backEnd/OAuth2/google/vendor/autoload.php';
     $clientID = '259230819724-stdqra0rpbqrsih6upusf32si86jvis5.apps.googleusercontent.com';
     $clientSecret = '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';
     $redirectUri = 'http://localhost/GiveMeMusic/user.php'; 
@@ -18,32 +38,11 @@
         $user =  $google_account_info->name;
         $mail =  $google_account_info->email;
     }
-    else{
-        $_SESSION['mail'] = $_POST['mail'];
-    }
-        if(isset($user) || isset($mail)){
+
+    var_dump($_SESSION);
+        if(isset($_SESSION["UID"])){
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>User infos</title>
-    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/css/util.css">
-    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/css/main.css">
-    <link rel="stylesheet" href="frontEnd/assets/cssFolder/user.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="backEnd/gestioneDB/request.js"></script>
-   </head>
-    <body>
+<body>
     <div class="sidebar">
         <div class="logo-details">
             <i class='bx bx-menu' id="btn" ></i>
@@ -93,9 +92,7 @@
         </ul>
     </div>
     <section class="home-section">
-
             <div class="text">mail: <?php $_SESSION['lMail'] ?></div>
-
     </section>
 <script src="frontEnd/assets/jsFolder/script.js"></script>
 </body>
@@ -103,27 +100,7 @@
 <?php
         }else{        
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>User infos</title>
-    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/css/util.css">
-    <link rel="stylesheet" type="text/css" href=".././frontEnd/assets/loginFolders/css/main.css">
-    <link rel="stylesheet" href="frontEnd/assets/cssFolder/user.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="backEnd/gestioneDB/request.js"></script>
-   </head>
-    <body>
+<body>
     <div class="sidebar">
         <div class="logo-details">
             <i class='bx bx-menu' id="btn" ></i>
@@ -174,17 +151,16 @@
     </div>
     <section class="home-section">
         <center>
-            <form method="POST">
+            <form>
             <div id="logDiv" class="container-login100" style="display:block"><!-- Login  -->
                 <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-                    <form class="login100-form validate-form" method="POST">
+                    <form action="/GiveMeMusic/API/user.php" class="login100-form validate-form">
                         <span class="login100-form-title p-b-37">Sign into <br>Give Me Music!</span>
 
                         <div class="wrap-input100 validate-input m-b-20" data-validate="Enter your email">
                             <input class="input100" type="email" id="lMail" name="lMail" placeholder="Email">
                             <span class="focus-input100"></span>
                         </div>
-
                         <div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
                             <input class="input100" type="password" id="lPsw" name="lPsw" placeholder="Password">
                             <span class="focus-input100"></span>
@@ -192,6 +168,7 @@
 
                         <div class="container-login100-form-btn">
                             <button class="login100-form-btn" onclick="userLogin();return false;">
+                            <!-- <button type="submit" -->
                             <?php
 
                             ?>
@@ -320,7 +297,7 @@
                         </div>
 
                         <div class="container-login100-form-btn">
-                            <button id="reg" class="login100-form-btn" onclick="resetPsw()"> <!-- ;return false -->
+                            <button id="reg" class="login100-form-btn" onclick="resetPsw();return false;">
                                 <a>Reset</a>
                             </button>
                         </div>

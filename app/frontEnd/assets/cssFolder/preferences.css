@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
-
 .home-section .text{
   display: inline-block;
   color: #11101d;
@@ -231,7 +230,8 @@
   background: none;
 }
 .home-section{
-  position: relative;
+  text-align: center;
+  position: fixed;
   background: #E4E9F7;
   min-height: 100vh;
   top: 0;
@@ -239,7 +239,6 @@
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
-
 }
 .sidebar.open ~ .home-section{
   left: 250px;

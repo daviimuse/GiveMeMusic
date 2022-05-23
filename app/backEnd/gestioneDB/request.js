@@ -50,7 +50,8 @@ function userLogin(){
         method: 'POST',
         headers: myHeaders,
         body: urlencoded,
-        redirect: 'follow'
+        redirect: 'follow',
+        credentials:"include"
         };
 
         fetch("http://papopep.altervista.org/GiveMeMusic/API/user.php", requestOptions)

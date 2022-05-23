@@ -1,6 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Favorite songs</title>
+    <link rel="stylesheet" href="frontEnd/assets/cssFolder/preferences.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="backEnd/gestioneDB/request.js"></script>
+     <script src="backEnd/requests/spotifyAPI.js"></script>
+   </head>
 <?php
     // require_once 'backEnd/OAuth2/google/vendor/autoload.php';
-    // session_start();
+    session_start();
     // $clientID = '440831399970-k5vj91pqnpvev88t793k4oemqsapsbcm.apps.googleusercontent.com';
     // $clientSecret = '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';
     // $redirectUri = 'http://papopep.altervista.org/GiveMeMusic-main/webApp/main.php'; 
@@ -22,27 +33,12 @@
     //     $mail = $_SESSION['mail'];
     // }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Favorite songs</title>
-    <link rel="stylesheet" href="frontEnd/assets/cssFolder/main.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="backEnd/gestioneDB/request.js"></script>
-   </head>
 <body>
   <div class="sidebar">
     <div class="logo-details">
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
-    <!-- <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li> -->
       
     <li>
         <a href="explore.php">
@@ -87,8 +83,22 @@
     </ul>
   </div>
   <section class="home-section">
-  <div class="text" style="height: 100%; width: 100%; display: flex; position: fixed; align-items: center; justify-content: center;">Log in to access to your preferences!<br>
-  <!-- <button onclick="getGenresFromDB()">Get Genres</button> -->
+    <?php
+    $x = 1;
+    if(isset($_SESSION["UID"])){
+    ?>
+      <div class="text" style="height: 100%; width: 100%; display: flex; position: fixed; align-items: center; justify-content: center;">Log in to access to your preferences!<br>
+      <!-- <button onclick="getGenresFromDB()">Get Genres</button>  -->
+      <?php
+    }else{
+      ?>
+    <div class="text" style="text-align: center;">Choose your favorite genres!</div><br>
+    <div class="genDiv" onclick="test()">
+      <span>Aucustic</span>
+    </div>
+<?php
+    }
+?>
 </section>
   <script src="frontEnd/assets/jsFolder/script.js"></script>
 </body>

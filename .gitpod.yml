@@ -1,6 +1,6 @@
-ports:
-  - port: 8000:80
-    onOpen: open-browser
+# ports:
+#   - port: 8000:80
+#     onOpen: open-browser
 
-tasks:
-  - command: sudo docker-compose up -d
+# tasks:
+#   - command: sudo docker-compose up -d
