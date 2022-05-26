@@ -1,5 +1,5 @@
-<?php
-
-class Error extends Exception
-{
-}
+<?php
+
+class Error extends Exception
+{
+}

@@ -1,5 +1,5 @@
-<?php
-
-class AssertionError extends Error
-{
-}
+<?php
+
+class AssertionError extends Error
+{
+}
